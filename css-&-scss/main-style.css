@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=main-style.css.map */
+.my-mess {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  width: 100%;
+  height: 100%;
+  background-color: peachpuff;
+}
+
+.text-list {
+  width: 90%;
+  height: 15rem;
+  text-align: center;
+}
+
+.quiz-code {
+  height: auto;
+  width: 90%;
+}
+/*# sourceMappingURL=main-style.css.map */

@@ -74,13 +74,46 @@ const titles = [
   "Little Women",
 ];
 
+//////////////////////////////////////////
+
+const authors = [
+  "Harper Lee wrote To Kill a Mockingbird in 1960",
+  "F. Scott Fitzgerald wrote The Great Gatsby in 1925",
+  "JRR Tolkien wrote The Hobbit in 1937",
+  "JK Rowling wrote Harry Potter & the Deathly Hallows in 1997",
+  "James Joyce wrote Ulysses in 1918",
+  "Leo Tolstoy wrote War & Peace in 1867",
+  "Jane Austen wrote Pride & Prejudice in 1813",
+  "JD Salinger wrote The Catcher in the Rye in 1951",
+  "Charles Dickens wrote Great Expectations in 1861",
+  "Lousina May Alcott wrote Little Women in 1868",
+];
 
 
 
+const sortedDate = books.sort((c1, c2) => (c1.publishDate > c2.publishDate) ? 1 : (c1.publishDate < c2.publishDate) ? -1 : 0);
+console.log(sortedDate);
+
+let booksCopy = JSON.parse(JSON.stringify(books))
+booksCopy.sort((a, b) => a.name.localeCompare(b.name));
+console.log(booksCopy);
+//and this took me like 2 hours to figure out. (how to get the second .sort() to stop overriding the 1st .sort()   lol.)
+
+let wroteWP = books.find(books => books.name === "War and Peace");
+console.log(wroteWP);
+
+let before1900 = books.filter(books => books.publishDate < "1900");
+//took me only like 3 hours of googling to write lol. This was the first thing I did. Why? IDK. 
+console.log(before1900);
+
+let within100 = books.some(books => books.publishDate >= 1921);
+console.log(within100);
+
+let every100 = books.every(books => books.publishDate >= 1921);
+console.log(every100);
 
 
-
-
+/////////////////////////////////////
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
